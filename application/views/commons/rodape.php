@@ -2,7 +2,7 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-sm-6">
-              <p>Zé Wagner Excursões, Transportes e Turismo &copy; 20182019</p>
+              <p>Zé Wagner Excursões, Transportes e Turismo &copy; 2018</p>
             </div>
             <div class="col-sm-6 text-right">
               <p>Desenvolvido by <a href="#" class="external">Monick Nogueira</a></p>

@@ -2,8 +2,8 @@
       <div class="breadcrumb-holder">
         <div class="container-fluid">
           <ul class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-item active">Tables       </li>
+            <li class="breadcrumb-item"><a href="<?php echo base_url();?>">Home</a></li>
+            <li class="breadcrumb-item active">Lista Clientes       </li>
           </ul>
         </div>
       </div>
@@ -11,7 +11,7 @@
         <div class="container-fluid">
           <!-- Page Header-->
           <header> 
-            <h1 class="h3 display">Lista Clientes            </h1>
+            <h1 class="h3 display">LISTA CLIENTES </h1>
           </header>
           <div class="row">
             <div class="col-lg-12">
@@ -22,8 +22,8 @@
                       <table class="table table-striped">
                       <thead>
                         <tr>
-                          <th>#</th>
-                          <th>Nome</th>
+                          <th>COD</th>
+                          <th>NOME</th>
                           <th>CPF</th>
                           <th></th>
                         </tr>
@@ -36,7 +36,7 @@
                             <th scope="row"><?php echo $usuario->idCliente;?></th>
                           <td><?php echo $usuario->nomeCliente;?></td>
                           <td><?php echo $usuario->cpfCliente;?></td>
-                          <td><a href="<?php echo base_url('welcome/teste2');?>">Editar</a></td>
+                          <td><a href="<?php echo base_url('welcome/atualizarCliente/'.$usuario->idCliente);?>">Editar</a></td>
                         </tr>
                         <?php }}?>
                         

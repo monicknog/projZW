@@ -35,7 +35,7 @@
         <!-- Sidebar Header    -->
         <div class="sidenav-header d-flex align-items-center justify-content-center">
           <!-- User Info-->
-          <div class="sidenav-header-inner text-center"><img src="<?php echo base_url('resources/img/avatar-1.jpg');?>" alt="person" class="img-fluid rounded-circle">
+          <div class="sidenav-header-inner text-center"><img src="<?php echo base_url('resources/img/zwz.jpg');?>" alt="person" class="img-fluid rounded-circle">
             <h2 class="h5">Zé Wagner</h2><span>Excurções, Transporte e Turismo</span>
           </div>
           <!-- Small Brand information, appears on minimized sidebar-->
@@ -49,31 +49,10 @@
             <li><a href="<?php echo base_url('welcome/teste2');?>"> <i class="icon-form"></i>Cadastrar Cliente</a></li>
             <li><a href="<?php echo base_url('welcome/teste3');?>"> <i class="icon-form"></i>Listar Clientes</a></li>
             <li><a href="<?php echo base_url('welcome/teste4');?>"> <i class="icon-form"></i>Gerar Carnês</a></li>
-            <li><a href="forms.html"> <i class="icon-form"></i>Forms</a></li>
-            <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts                             </a></li>
-            <li><a href="tables.html"> <i class="icon-grid"></i>Tables                             </a></li>
-            <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Example dropdown </a>
-              <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
-                <li><a href="#">Page</a></li>
-                <li><a href="#">Page</a></li>
-                <li><a href="#">Page</a></li>
-              </ul>
-            </li>
-            <li><a href="login.html"> <i class="icon-interface-windows"></i>Login page                             </a></li>
-            <li> <a href="#"> <i class="icon-mail"></i>Demo
-                <div class="badge badge-warning">6 New</div></a></li>
-          </ul>
+            <li><a href="<?php echo base_url('welcome/login');?>"> <i class="icon-interface-windows"></i>Login page                             </a></li>
+            </ul>
         </div>
-        <div class="admin-menu">
-          <h5 class="sidenav-heading">Second menu</h5>
-          <ul id="side-admin-menu" class="side-menu list-unstyled"> 
-            <li> <a href="#"> <i class="icon-screen"> </i>Demo</a></li>
-            <li> <a href="#"> <i class="icon-flask"> </i>Demo
-                <div class="badge badge-info">Special</div></a></li>
-            <li> <a href=""> <i class="icon-flask"> </i>Demo</a></li>
-            <li> <a href=""> <i class="icon-picture"> </i>Demo</a></li>
-          </ul>
-        </div>
+        
       </div>
     </nav>
     <div class="page">
@@ -85,10 +64,9 @@
               <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i class="icon-bars"> </i></a><a href="<?php echo base_url();?>" class="navbar-brand">
                   <div class="brand-text d-none d-md-inline-block"><span></span><strong class="text-primary"></strong></div></a></div>
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
-                
-                
+               
                 <!-- Log out-->
-                <li class="nav-item"><a href="login.html" class="nav-link logout"> <span class="d-none d-sm-inline-block">Logout</span><i class="fa fa-sign-out"></i></a></li>
+                <li class="nav-item"><a href="<?php echo base_url('welcome/logout');?>" class="nav-link logout"> <span class="d-none d-sm-inline-block">Logout</span><i class="fa fa-sign-in"></i></a></li>
               </ul>
             </div>
           </div>

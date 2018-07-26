@@ -7,7 +7,7 @@
                 <div class="wrapper count-title d-flex">
                     <div class="icon"><i class="icon-user"></i></div>
                     <div class="name"><strong class="text-uppercase">Novos Clientes</strong><span>Ultimos 7 dias</span>
-                        <div class="count-number">25</div>
+                        <div class="count-number"><?php echo $ultimos7dias;?></div>
                     </div>
                 </div>
             </div>
@@ -15,8 +15,8 @@
             <div class="col-xl-4 col-md-4 col-4">
                 <div class="wrapper count-title d-flex">
                     <div class="icon"><i class="icon-padnote"></i></div>
-                    <div class="name"><strong class="text-uppercase">Total Clientes</strong><span>Ultimos...</span>
-                        <div class="count-number">400</div>
+                    <div class="name"><strong class="text-uppercase">Total Clientes</strong><span>Desde JUL/2018</span>
+                        <div class="count-number"><?php echo $totalCliente;?></div>
                     </div>
                 </div>
             </div>
@@ -24,8 +24,8 @@
             <div class="col-xl-4 col-md-4 col-4">
                 <div class="wrapper count-title d-flex">
                     <div class="icon"><i class="icon-check"></i></div>
-                    <div class="name"><strong class="text-uppercase">Carnês Gerados</strong><span>Last 2 months</span>
-                        <div class="count-number">342</div>
+                    <div class="name"><strong class="text-uppercase">Carnês Gerados</strong><span>Desde JUL/2018</span>
+                        <div class="count-number"><?php echo $totalCarne;?></div>
                     </div>
                 </div>
             </div>
@@ -54,7 +54,7 @@
                                     <?php if (isset($empresa)) {
                                         foreach ($empresa as $usuario) {
                                             ?>
-                                    <input id="nomeEmpresa" hidden="true" type="text" name="idEmpresa" required class="input-material dis" value="<?php echo $usuario->idEmpresa; ?>">
+                                    <input id="idEmpresa" hidden="true" type="text" name="idEmpresa" required class="input-material dis" value="<?php echo $usuario->idEmpresa; ?>">
                                                 
                                             <div class="form-group-material">
                                                 <input id="nomeEmpresa" disabled="true" type="text" name="nomeEmpresa" required class="dis input-material" value="<?php echo $usuario->nomeEmpresa; ?>">

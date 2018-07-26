@@ -11,57 +11,89 @@
     <div class="container-fluid">
         <!-- Page Header-->
         <header> 
-            <h1 class="h3 display">Cadastro Cliente</h1>
+            <h1 class="h3 display">CADASTRO CLIENTE</h1>
         </header>
         <div class="row">
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header d-flex align-items-center">
-                        <h4>Preencha os dados corretamente</h4>
+                        <h4>PREENCHA OS DADOS CORRETAMENTE</h4>
                     </div>
                     <div class="card-body">
-                        <form class="form-horizontal" method="post" action="<?php echo base_url('welcome/cadastrarCliente');?>">
-                            <div class="row">
-                                <div class="col-sm-10">
-                                    <div class="form-group-material">
-                                        <input id="nomeCliente" type="text" name="nomeCliente" required class="input-material">
-                                        <label for="nomeCliente" class="label-material">Nome</label>
-                                    </div>
-                                    <div class="form-group-material">
-                                        <input id="cpfCliente" type="text" name="cpfCliente" required class="input-material">
-                                        <label for="cpfCliente" class="label-material">CPF</label>
-                                    </div>
-                                    <div class="form-group-material">
-                                        <input id="rgCliente" type="text" name="rgCliente" required class="input-material">
-                                        <label for="rgCliente" class="label-material">RG                                                      </label>
-                                    </div>
-                                    <div class="form-group-material">
-                                        <input id="telCliente" type="text" name="telCliente" required class="input-material">
-                                        <label for="telCliente" class="label-material">Telefone</label>
-                                    </div>
-                                    <div class="form-group-material">
-                                        
-                                        <input id="dataNascCliente" type="date" name="dataNascCliente" required class="input-material">
-                                        <span class="text-small text-gray help-block-none">Data de Nascimento</span>
-                                    </div>
-                                    <div class="form-group-material">
-                                        <input id="enderecoCliente" type="text" name="enderecoCliente" required class="input-material">
-                                        <label for="enderecoCliente" class="label-material">Endereço</label>
-                                    </div>
-                                    <div class="form-group-material">
-                                        <input id="cidadeCliente" type="text" name="cidadeCliente" required class="input-material">
-                                        <label for="cidadeCliente" class="label-material">Cidade</label>
-                                    </div>
-                                </div>
+                        <?php echo form_open('welcome/cadastrarCliente'); ?>
+                           <?php if (isset($cliente)){?>
+                           <input type="text" hidden="true" class="form-control" name="idCliente" id="nomeCliente" placeholder="" value="<?php
+                            if (isset($cliente)){
+                                echo $cliente[0]->idCliente;
+                           }?>">
+                           <?php }?>
+
+
+                        <div class="form-group">
+                            <label for="nomeCliente">NOME COMPLETO</label>
+                            <input type="text" class="form-control" name="nomeCliente" id="nomeCliente" placeholder="" value="<?php
+                            if (isset($cliente)){
+                                echo $cliente[0]->nomeCliente;
+                            }?>">
+                        </div>
+                        <div class="form-row">
+
+                            <div class="form-group col-md-6">
+                                <label for="cpfCliente">CPF</label>
+                                <input type="text" class="form-control" id="cpfCliente" name="cpfCliente" placeholder="XXX.XXX.XXX-XX" value="<?php
+                            if (isset($cliente)){
+                                echo $cliente[0]->cpfCliente;
+                            }?>">
                             </div>
-                    <div class="line"></div>
-                            <div class="form-group row">
-                                <div class="col-sm-4 offset-sm-2">
-                                    <button type="submit" class="btn btn-secondary">Cancelar</button>
-                                    <button type="submit" class="btn btn-primary">Salvar</button>
-                                </div>
+                            <div class="form-group col-md-6">
+                                <label for="rgCliente">RG</label>
+                                <input type="text" class="form-control" id=rgCliente" name="rgCliente" placeholder="XXXXXXXX-X" value="<?php
+                            if (isset($cliente)){
+                                echo $cliente[0]->rgCliente;
+                            }?>">
                             </div>
-                        </form>
+
+                        </div>
+                        <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="telCliente">TELEFONE</label>
+                            <input type="text" class="form-control" id="telCliente" name="telCliente" placeholder="(XX)X.XXXX-XXXX" value="<?php
+                            if (isset($cliente)){
+                                echo $cliente[0]->telCliente;
+                            }?>">
+                        </div>                        
+                        <div class="form-group col-md-6">
+                            <label for="dataNascCliente">DATA NASCIMENTO</label>
+                            <input type="date" class="form-control" id="dataNascCliente" name="dataNascCliente" placeholder="" value="<?php
+                            if (isset($cliente)){
+                                echo $cliente[0]->dataNascCliente;
+                            }?>">
+                        </div>
+                        </div>
+                        
+                        <div class="form-row">
+
+                            <div class="form-group col-md-8">
+                                <label for="enderecoCliente">ENDEREÇO</label>
+                                <input type="text" class="form-control" id="enderecoCliente" name="enderecoCliente" placeholder="RUA X, N X, BAIRRO" value="<?php
+                            if (isset($cliente)){
+                                echo $cliente[0]->enderecoCliente;
+                            }?>">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="cidadeCliente">CIDADE</label>
+                                <input type="text" class="form-control" id="cidadeCliente" name="cidadeCliente" value="<?php
+                            if (isset($cliente)){
+                                echo $cliente[0]->cidadeCliente;
+                            }?>">
+                            </div>
+                        </div>
+                        <div class="line"></div>
+
+                        <button type="submit" class="btn btn-primary">SALVAR</button>
+
+
+                        <?php echo form_close(); ?>
                     </div>
                 </div>
             </div>
